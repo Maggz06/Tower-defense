@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09ede4f6f09cba7449c0a8234bc5f33c, type: 3}
+  m_Name: Triple Fast Bullet
+  m_EditorClassIdentifier: 
+  BaseBulletOffset: 0
+  ReloadModifier: 1
+  FireDelay: 1
+  Bullets:
+  - ModelKey: CubeBullet
+    ColorFactor: {r: 0.023584902, g: 0.29754236, b: 1, a: 0}
+    SpeedFactor: 5
+    FireAngleOffset: -15
+    FireDelay: 0
+    SizeFactor: 1
+    ImpactDamage: 1
+    ImpactHealth: 1
+  - ModelKey: CubeBullet
+    ColorFactor: {r: 0.023584902, g: 0.29754236, b: 1, a: 0}
+    SpeedFactor: 5
+    FireAngleOffset: 0
+    FireDelay: 0
+    SizeFactor: 1
+    ImpactDamage: 1
+    ImpactHealth: 1
+  - ModelKey: CubeBullet
+    ColorFactor: {r: 0.023584902, g: 0.29754236, b: 1, a: 0}
+    SpeedFactor: 5
+    FireAngleOffset: 15
+    FireDelay: 0
+    SizeFactor: 1
+    ImpactDamage: 1
+    ImpactHealth: 1
+  CurrentBullet: 0
+  BulletDelayTimer: 0
