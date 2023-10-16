@@ -16,13 +16,11 @@ MonoBehaviour:
   ReloadModifier: 1
   FireDelay: 1
   Bullets:
-  - ModelKey: Sphere
+  - ModelKey: SphereBullet
     ColorFactor: {r: 0, g: 0, b: 0, a: 0}
-    SpeedFactor: 1
+    SpeedFactor: 10
     FireAngleOffset: 0
     FireDelay: 0
     SizeFactor: 10
     ImpactDamage: 10
     ImpactHealth: 3
-  CurrentBullet: 0
-  BulletDelayTimer: 0
