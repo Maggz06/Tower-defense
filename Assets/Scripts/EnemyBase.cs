@@ -9,8 +9,10 @@ public class EnemyBase : MonoBehaviour
 {
     [Header("Enemy Data")]
     public Enemy EnemyData = new Enemy();
+
     [Header("Static References")]
     public TextMeshProUGUI EnemyHealth = null;
+
     public void Initialize(Vector3 aMovementDirection, Enemy aEnemyContainer = null)
     {
         if(aEnemyContainer != null)

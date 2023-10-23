@@ -6,14 +6,17 @@ public class TowerBase : MonoBehaviour
 {
     [Header("Gun Data")]
     public List<GunBaseObject> Guns = new List<GunBaseObject>();
+
     [Header("Dynamic Values")]
     public int CurrentGun = 0;
     public int CurrentBullet = 0;
     public float BulletDelayTimer = 0.0f;
     public int CurrentWave = 0;
     public float WaveTimer = 0.0f;
+
     //public Vector3 FirePositionOffset = Vector3.zero;
     public EnemyBase LockedOnTargetEnemy = null;
+
     void Start()
     {
         foreach (GunBaseObject gun in Guns)

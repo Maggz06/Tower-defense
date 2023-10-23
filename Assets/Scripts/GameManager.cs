@@ -3,17 +3,21 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Rendering;
+
 /*
 THE MASTER BECOMES 
 A HUMAN FURNACE
 THAT MAY SMITE 
 AND PUNISH GOD
 */
+
 [System.Serializable]
+
 public class PlayerData
 {
     [Header("Static Values")]
     public int PlayerMaxHealth = 10;
+
     [Header("Dynamic Values")]
     public int PlayerHealth = 10;
     public int PlayerMoney = 0;
@@ -24,6 +28,7 @@ public class PlayerData
         PlayerMoney = 0;
     }
 }
+
 public class GameManager : MonoBehaviour
 {
     public static GameManager GlobalGameManager = null;
@@ -31,17 +36,20 @@ public class GameManager : MonoBehaviour
     [Header("Spawnable Objects")]
     public List<GameObject> SpawnableObjects = new List<GameObject>();
     public Dictionary<string, GameObject> SpawnableObjectsMap = new Dictionary<string, GameObject>();
+
     
     [Header("Enemies & Tracking")]
     public List<EnemyWaveContainer> EnemyWavesInLevel = new List<EnemyWaveContainer>();
     public int CurrentEnemyWave = 0;
     public Transform EnemyStartingPos = null;
+
     [Header("Static References")]
     public PlayerData CurrentPlayerData = null;
     public TextMeshProUGUI PlayerHealthText = null;
     public TextMeshProUGUI PlayerMoneyText = null;
     public TextMeshProUGUI WaveNumberText = null;
     [Header("Dynamic References")]
+
     public List<EnemyBase> AllEnemies = new List<EnemyBase>();
 
 

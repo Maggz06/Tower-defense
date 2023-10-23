@@ -7,11 +7,14 @@ public class BulletBase : MonoBehaviour
 {
     [Header("Bullet Data")]
     public Bullet BulletData = new Bullet();
+
     [Header("Static References")]
     public MeshRenderer myMeshRenderer = null;
+
     [Header("Dynamic Values")]
     public Vector3 MoveDirection = Vector3.zero;
     private float lifeTime = 0.0f;
+
     public void Initialize(Bullet aBulletContainer)
     {
         BulletData.Copy(aBulletContainer);
