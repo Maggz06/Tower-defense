@@ -5,15 +5,11 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "BulletWave", menuName = "TowerDefense/BulletWave")]
 public class BulletWave : ScriptableObject
 {
-    [Header("Tracking & Spread")]
-    //public float TrackingAimOffset = 0.0f;
-    public float BaseBulletOffset = 0.0f;
-
-    [Header("Firerate")]
-    public float ReloadModifier = 1.0f;
+    [Header("How many angles should the bullet lead the target?")]
+    public float TrackingAimOffset = 0.0f;
+    [Header("How long from the last bulletwave to this one?")]
     public float FireDelay = 1.0f;
-
-    [Header("Waves")]
+    [Header("All the bullets in this Wave:")]
     public List<Bullet> Bullets = new List<Bullet>();
  
 

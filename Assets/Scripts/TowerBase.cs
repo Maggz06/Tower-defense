@@ -85,10 +85,13 @@ public class TowerBase : MonoBehaviour
 
             if (BulletDelayTimer >= currentBullet.FireDelay)
             {
-                var bulletSpawn = GameManager.GlobalGameManager.SpawnObject(currentBullet.ModelKey, transform.position);
+                var bulletSpawn = GameManager.GlobalGameManager.SpawnObject(currentBullet.SpawnKey.name, transform.position);
                 var bulletComponent = bulletSpawn.GetComponent<BulletBase>();
                 bulletComponent.Initialize(currentBullet);
                 bulletComponent.MoveDirection = (LockedOnTargetEnemy.transform.position - transform.position).normalized;
+                float rotationAngle = currentBullet.FireAngleOffset + currentWave.TrackingAimOffset;
+                Quaternion rotation = Quaternion.Euler(0, rotationAngle, 0);
+                bulletComponent.MoveDirection = rotation * bulletComponent.MoveDirection;
                 BulletDelayTimer -= currentBullet.FireDelay;
                 CurrentBullet++;
             }

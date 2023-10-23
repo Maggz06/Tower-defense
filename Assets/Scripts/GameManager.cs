@@ -16,10 +16,12 @@ public class PlayerData
     public int PlayerMaxHealth = 10;
     [Header("Dynamic Values")]
     public int PlayerHealth = 10;
+    public int PlayerMoney = 0;
 
     public void Reset()
     {
-        PlayerHealth = PlayerMaxHealth; 
+        PlayerHealth = PlayerMaxHealth;
+        PlayerMoney = 0;
     }
 }
 public class GameManager : MonoBehaviour
@@ -60,6 +62,10 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
 
     }
+    private void Update()
+    {
+        PlayerMoneyText.text = CurrentPlayerData.PlayerMoney.ToString() + "$";
+    }
     public void OnSpawnNextWave()
     {
         DoSpawnWave();
@@ -75,6 +81,7 @@ public class GameManager : MonoBehaviour
         CurrentEnemyWave++;
         if (CurrentEnemyWave >= EnemyWavesInLevel.Count)
         { CurrentEnemyWave = 0; }
+        WaveNumberText.text = $"Wave {CurrentEnemyWave}/{EnemyWavesInLevel.Count}";
     }
 
     public GameObject SpawnObject(string key, Vector3 aPostion = new Vector3())

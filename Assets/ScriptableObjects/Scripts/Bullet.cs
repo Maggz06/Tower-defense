@@ -6,20 +6,24 @@ using UnityEngine;
 public class Bullet
 {
     [Header("Base & Apperance")]
-    public string ModelKey = "";
+    public GameObject SpawnKey = null;
     public Color ColorFactor = Color.white;
-    [Header("Fire")]
+    [Header("How Fast is the bullet?")]
     public float SpeedFactor = 1.0f;
+    [Header("How many degrees should the bullet offset from the original aim direction?")]
     public float FireAngleOffset = 0.0f;
+    [Header("How much time should pass between the last bullet and this one?")]
     public float FireDelay = 0.0f;
-    [Header("Impact")]
+    [Header("How Big is the bullet?")]
     public float SizeFactor = 1.0f;
+    [Header("How much damage does the bullet do?")]
     public int ImpactDamage = 1;
+    [Header("How many times can the bullet hit an enemy?")]
     public int ImpactHealth = 1;
 
     public void Copy(Bullet aBulletToCopy)
     {
-        ModelKey = aBulletToCopy.ModelKey;
+        SpawnKey = aBulletToCopy.SpawnKey;
         ColorFactor = aBulletToCopy.ColorFactor;
         SpeedFactor = aBulletToCopy.SpeedFactor;
         FireAngleOffset = aBulletToCopy.FireAngleOffset;
