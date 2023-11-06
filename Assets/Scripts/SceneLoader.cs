@@ -9,9 +9,24 @@ public class SceneLoader : MonoBehaviour
     {
         SceneManager.LoadScene(buildindex);
     }
+    public void LoadNextScene()
+    {
+        int nextSceneIndex = LoopBuildIndex(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(nextSceneIndex);
+    }
 
-    public void QuiitGame4()
+        public void QuiitGame4()
     {
         Application.Quit();
     }
+    private int LoopBuildIndex(int buildIndex)
+    {
+        if (buildIndex >= SceneManager.sceneCountInBuildSettings)
+        {
+            buildIndex = 0;
+        }
+
+        return buildIndex;
+    }
+
 }
