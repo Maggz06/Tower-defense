@@ -42,7 +42,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6025251827436549033}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: -6219848842421530281, guid: e69a8978ba29d8a4ebccdc44bcd2385a, type: 3}
 --- !u!23 &8066035276554547111
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -119,5 +119,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Guns:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: bdff586df96601041a56d872326f3455, type: 2}
   CurrentGun: 0
+  CurrentBullet: 0
+  BulletDelayTimer: 0
+  CurrentWave: 0
+  WaveTimer: 0
+  LockedOnTargetEnemy: {fileID: 0}
