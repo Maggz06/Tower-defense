@@ -97,8 +97,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3749afd10fab9454bbe658ba03ba9616, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulletGraphics: {fileID: 0}
   BulletData:
-    SpawnKey: {fileID: 0}
+    SpawnKey: {fileID: 919132149155446097, guid: 49d3faf1c3d0a4746b9efb6e3938b000, type: 3}
     ColorFactor: {r: 1, g: 1, b: 1, a: 1}
     SpeedFactor: 1
     FireAngleOffset: 0

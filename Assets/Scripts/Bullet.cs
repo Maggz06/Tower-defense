@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
+
 public class Bullet
 {
+
     [Header("Base & Apperance")]
     public GameObject SpawnKey = null;
     public Color ColorFactor = Color.white;

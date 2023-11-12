@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2323639661852080302}
   m_Layer: 0
   m_Name: SphereBullet
-  m_TagString: Untagged
+  m_TagString: BackwardBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -124,7 +124,7 @@ MonoBehaviour:
     SpeedFactor: 1
     FireAngleOffset: 0
     FireDelay: 0
-    SizeFactor: 1
+    SizeFactor: 0
     ImpactDamage: 1
     ImpactHealth: 1
   myMeshRenderer: {fileID: 2007429233915539440}
